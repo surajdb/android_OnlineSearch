@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.suraj.pocketguide.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayMainSearchHolder">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.06"
+            android:background="@android:color/holo_blue_light">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="0.9"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="0.9"
+                    android:inputType="text"
+                    android:background="@drawable/roundededittext"
+                    android:ems="10"
+                    android:id="@+id/editTextSearch"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:hint="Search..." />
+
+                <TextView
+                    android:text="GO"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="-50dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:paddingTop="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/roundededittext"
+                    android:layout_gravity="center"
+                    android:ems="10"
+                    android:id="@+id/txtGo"
+                    android:layout_weight="0.1"
+                    android:textSize="18sp"
+                    android:textStyle="normal|bold"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+            </LinearLayout>
+
+            <!--<Button-->
+                <!--android:text="Button"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:id="@+id/search_voice_btn"-->
+                <!--android:layout_weight="0.1" />-->
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.76">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainListView"/>
+
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="4"
+                android:id="@+id/mainGridView">
+            </GridView>
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mainWebView"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.06"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_alignParentBottom="true">
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    app:srcCompat="@drawable/main_startpage"
+                    android:layout_weight="1"
+                    android:id="@+id/imgHome" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="3dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/main_speed_dial"
+                    android:id="@+id/imgAddSites" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/main_forward"
+                    android:id="@+id/imgForward"
+                    android:layout_weight="1" />
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="3dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--app:srcCompat="@drawable/main_history"-->
+                    <!--android:id="@+id/imgHistory" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="3dp"-->
+                    <!--app:srcCompat="@drawable/main_bookmark"-->
+                    <!--android:id="@+id/imgBookmark"-->
+                    <!--android:layout_weight="1" />-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:padding="3dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--app:srcCompat="@drawable/main_screenshot"-->
+                    <!--android:id="@+id/imgScreenshot" />-->
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>
